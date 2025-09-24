@@ -47,8 +47,8 @@ The frontend is configured to call the backend at `http://localhost:4000/todos`.
 2. Set Environment Variable for the project:
    - `REACT_APP_API_URL` = your backend URL (e.g. `https://YOUR-BACKEND/todos` or `http://localhost:4000/todos` for local preview)
 3. Build Command: `npm run build`
-4. Output Directory: `frontend/build`
-5. Root Directory: `todo-app/frontend`
+4. Output Directory: `build`
+5. Root Directory: `frontend`
 6. Deploy.
 
 Note: This deploys only the frontend. Host the backend separately (Render/Fly/Heroku/railway). Ensure CORS in `backend/src/server.js` allows your Vercel domain.
