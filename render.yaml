@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: todo-backend
+    env: node
+    plan: free
+    rootDir: todo-app/backend
+    buildCommand: npm install && npx prisma migrate deploy && npx prisma generate
+    startCommand: node src/server.js
+    envVars:
+      - key: PORT
+        value: 4000
+      - key: DATABASE_URL
+        value: file:./data/dev.db
+    disk:
+      name: data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
